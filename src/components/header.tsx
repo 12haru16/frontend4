@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import MenuIcon from '@mui/icons-material/Menu';
+import Avatar from '@mui/material/Avatar';
+import quicon from "./qu.png"
 
 import {useState} from 'react';
 import { useNavigate } from "react-router-dom";
@@ -38,7 +40,7 @@ export default function Header() {
   }
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{bgcolor:"#009A57"}}>
+      <AppBar position="static" sx={{bgcolor:"#f2fef2"}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -48,14 +50,15 @@ export default function Header() {
             sx={{ mr: 2}}
           >
           </IconButton>
-          <Typography onClick ={() => navigate("/")} variant="h5" component="div" sx={{ flexGrow: 1 }}>
+          <Avatar alt="Remy Sharp" src={quicon} sx={{ height: '60px', width: '60px'}} />
+          <Typography onClick ={() => navigate("/")} variant="h4" component="div" sx={{color:"#0e3d11",flexGrow: 1,pl:3}} align="left">
             GreenQ
           </Typography>
-          <IconButton onClick={handleCameraClickOpen} size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2}}>
-            <AddAPhotoIcon />
+          <IconButton onClick={handleCameraClickOpen} size="large" edge="start" aria-label="menu" sx={{ mr: 2,color:"#0e3d11"}}>
+            <AddAPhotoIcon fontSize='large'/>
           </IconButton>
-          <IconButton onClick={undefined} size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-          <MenuIcon />
+          <IconButton onClick={undefined} size="large" edge="start" aria-label="menu" sx={{ mr: 2,color:"#0e3d11"}}>
+          <MenuIcon fontSize='large'/>
           </IconButton>
           
           <Dialog

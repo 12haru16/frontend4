@@ -100,8 +100,8 @@ const styles = {
       },
        // 列ヘッダに背景色を指定
       '.MuiDataGrid-columnHeaders': {
-        backgroundColor: '#003D21', 
-        color: '#fff',
+        backgroundColor: '#f2fef2', 
+        color: '#0e3d11',
         fontSize: 17,
         letterSpacing: 5
       },
