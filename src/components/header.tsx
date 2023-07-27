@@ -51,7 +51,7 @@ export default function Header() {
           >
           </IconButton>
           <Avatar alt="Remy Sharp" src={quicon} sx={{ height: '60px', width: '60px'}} />
-          <Typography onClick ={() => navigate("/")} variant="h4" component="div" sx={{color:"#0e3d11",flexGrow: 1,pl:3}} align="left">
+          <Typography onClick ={() => navigate("/main")} variant="h4" component="div" sx={{color:"#0e3d11",flexGrow: 1,pl:3}} align="left">
             GreenQ
           </Typography>
           <IconButton onClick={handleCameraClickOpen} size="large" edge="start" aria-label="menu" sx={{ mr: 2,color:"#0e3d11"}}>
@@ -60,7 +60,7 @@ export default function Header() {
           <IconButton onClick={undefined} size="large" edge="start" aria-label="menu" sx={{ mr: 2,color:"#0e3d11"}}>
           <MenuIcon fontSize='large'/>
           </IconButton>
-          
+
           <Dialog
             open={openCameraPopup}
             keepMounted

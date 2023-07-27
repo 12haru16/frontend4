@@ -8,6 +8,7 @@ import PieChart from './charts/pieChart';
 import BarChart from './charts/barChart';
 import RankingCard from './charts/RankingCard';
 import ShowDataBase from './showDB';
+import Header from './header';
 import {useState, useEffect} from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -33,6 +34,9 @@ export default function Main(){
         .catch(() => alert("error"));
     }, []);
     return(
+        <div>
+          <Header />
+          <p></p>
         <Grid container spacing={1} sx={{p:2}}>
           <Grid xs={8} sx={{pl:2}}>
             <Typography variant="h4" component="div" color="text.secondary" align="left">
@@ -65,5 +69,6 @@ export default function Main(){
             </Item>
           </Grid>
         </Grid>
+        </div>
     )
 }
