@@ -75,10 +75,10 @@ function Login() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="username"
+              name="username"
+              autoComplete="username"
               autoFocus
               onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                 setUsername(event.target.value);
@@ -102,7 +102,9 @@ function Login() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={()=>handleLogin}
+              // onClick={()=>handleLogin}
+              // onClick={handleLogin}
+              onClick={() => navigate("/main")}
             >
               Sign In
             </Button>
